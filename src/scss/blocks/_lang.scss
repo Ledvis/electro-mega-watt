@@ -1,0 +1,83 @@
+.lang {
+  display: none;
+}
+
+@media #{$desktop-width} {
+  .lang {
+    position: relative;
+    display: block;
+    &__value {
+      @include button-reset;
+      position: relative;
+      padding: 10px 24px 10px 4px;
+      color: rgb(255, 255, 255);
+      font-family: $main-font;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 18px;
+      text-transform: uppercase;
+      cursor: pointer;
+      &::before {
+        @include vertical-center;
+        content: "";
+        right: 3px;
+        width: 15px;
+        height: 10px;
+        background: url("../img/arrow-bottom-yellow.svg") no-repeat center;
+        background-size: cover;
+      }
+      &:hover~.lang__list,
+      &:focus-within~.lang__list {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+      }
+    }
+    &__list {
+      position: absolute;
+      top: 35px;
+      left: 0;
+      margin: 0;
+      padding: 0;
+      opacity: 0;
+      visibility: hidden;
+      transform: scale(0);
+      list-style: none;
+      transition: opacity 0.35s;
+      &:hover,
+      &:focus {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+      }
+    }
+    &__item {
+      &:not(:last-of-type) {
+        border-bottom: 2px solid rgb(224, 224, 224);
+      }
+    }
+    &__link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 33px;
+      color: rgb(189, 189, 189);
+      font-family: $main-font;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 18px;
+      text-transform: uppercase;
+      text-decoration: none;
+      background-color: rgb(249, 250, 252);
+      transition: all 0.35s;
+      box-sizing: border-box;
+      &:hover,
+      &--active {
+        color: rgb(0, 0, 0);
+        font-weight: 500;
+        background-color: rgb(255, 214, 44);
+      }
+    }
+  }
+}

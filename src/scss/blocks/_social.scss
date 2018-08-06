@@ -1,0 +1,110 @@
+.social {
+  display: flex;
+  justify-content: space-between;
+  &--horizontal-line {
+    justify-content: center;
+    &::before {
+      @include vertical-center;
+      content: "";
+      left: 0;
+      right: 0;
+      height: 5px;
+      background-color: rgb(249, 220, 98);
+    }
+  }
+  &__item {
+    position: relative;
+    font-size: 0;
+    border: 5px solid rgb(249, 220, 98);
+    box-sizing: border-box;
+    &::before {
+      @include absolute-center;
+      content: "";
+      width: 10px;
+      height: 10px;
+    }
+    &--white {
+      width: 60px;
+      height: 60px;
+      background-color: rgb(255, 255, 255);
+      transition: background 0.35s;
+      &:hover {
+        background-color: rgb(249, 220, 98);
+      }
+      &:not(:last-of-type) {
+        margin-right: 20px;
+      }
+    }
+    &--transparent {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      &:hover {
+        background-color: rgb(249, 220, 98);
+        svg {
+          fill: black;
+        }
+      }
+      svg {
+        fill: white;
+        transition: fill 0.35s;
+      }
+    }
+    &--facebook {
+      &::before {
+        width: 14px;
+        height: 27px;
+        background: url("../img/facebook-black.svg") no-repeat center;
+        background-size: cover;
+      }
+    }
+    &--twitter {
+      &::before {
+        width: 27px;
+        height: 22px;
+        background: url("../img/twitter-black.svg") no-repeat center;
+        background-size: cover;
+      }
+    }
+    &--linkedin {
+      &::before {
+        width: 24px;
+        height: 24px;
+        background: url("../img/linkedin-black.svg") no-repeat center;
+        background-size: cover;
+      }
+    }
+    &--telegram {
+      &::before {
+        width: 24px;
+        height: 20px;
+        background: url("../img/telegram-black.svg") no-repeat center;
+        background-size: cover;
+      }
+    }
+    &--google-plus {
+      &::before {
+        width: 32px;
+        height: 20px;
+        background: url("../img/google-plus-black.svg") no-repeat center;
+        background-size: cover;
+      }
+    }
+  }
+}
+
+@media #{$tablet-width} {
+  .social {
+    &__item {
+      &--transparent {
+        width: 60px;
+        height: 60px;
+        &:not(:last-of-type) {
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}

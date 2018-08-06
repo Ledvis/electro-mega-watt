@@ -1,0 +1,124 @@
+.tokens {
+  background: url("../img/custom-white-bg@1x.jpg") no-repeat center;
+  background-size: cover;
+  &__wrapper {
+    @include container;
+    padding: 58px 15px 60px;
+  }
+  &__title {
+    margin-bottom: 52px;
+  }
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__item {
+    position: relative;
+    padding: 17px 5px 19px 100px;
+    text-align: left;
+    box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.2);
+    background-color: rgb(255, 255, 255);
+    &:not(:last-of-type) {
+      margin-bottom: 25px;
+    }
+    &::before {
+      @include vertical-center;
+      content: "";
+      left: 10px;
+      width: 70px;
+      height: 70px;
+    }
+    &--first {
+      &::before {
+        background: url("../img/token-item-1.svg") no-repeat center;
+        background-size: cover;
+      }
+    }
+    &--second {
+      &::before {
+        background: url("../img/token-item-2.svg") no-repeat center;
+        background-size: cover;
+      }
+    }
+    &--third {
+      &::before {
+        background: url("../img/token-item-3.svg") no-repeat center;
+        background-size: cover;
+      }
+    }
+    &--fourth {
+      &::before {
+        background: url("../img/token-item-4.svg") no-repeat center;
+        background-size: cover;
+      }
+    }
+    &--fifth {
+      &::before {
+        background: url("../img/token-item-5.svg") no-repeat center;
+        background-size: cover;
+      }
+    }
+  }
+  &__value {
+    color: rgb(30, 30, 30);
+    font-family: $main-font;
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 27px;
+    text-transform: uppercase;
+  }
+}
+
+@media #{$tablet-width} {
+  .tokens {
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    &__item {
+      flex-basis: 354px;
+      box-sizing: border-box;
+      &:last-of-type {
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+@media #{$desktop-width} {
+  .tokens {
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &__title {
+      margin-bottom: 82px;
+    }
+    &__item {
+      flex-basis: 360px;
+      padding: 15px 5px 15px 100px;
+      box-sizing: border-box;
+      &:last-of-type {
+        margin: 0;
+      }
+      &:not(:last-of-type) {
+        margin: 0;
+      }
+      &:not(:first-of-type) {
+        margin: 0 0 0 30px;
+      }
+      &:nth-of-type(-n+3) {
+        margin-bottom: 30px;
+      }
+    }
+    &__value {
+      display: block;
+      margin-top: 5px;
+      font-size: 26px;
+      line-height: 27px;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+.roadmap {
+  background: url("../img/custom-white-bg@1x.jpg") no-repeat center;
+  background-size: cover;
+  &__wrapper {
+    @include container;
+    padding: 58px 0 60px;
+  }
+  &__title {
+    &.title--black {
+      margin-bottom: 40px;
+    }
+    &.title--thin {
+      margin-bottom: 35px;
+    }
+  }
+}
+
+@media #{$tablet-width} {
+  .roadmap {
+    &__wrapper {
+      padding: 47px 0 60px;
+    }
+    &__title {
+      &.title--black {
+        margin-bottom: 37px;
+      }
+      &.title--thin {
+        margin-bottom: 50px;
+      }
+    }
+  }
+}
+
+@media #{$desktop-width} {
+  .roadmap {
+    &__wrapper {
+      padding: 117px 0 120px;
+    }
+    &__title {
+      &.title--black {
+        margin-bottom: 81px;
+      }
+      &.title--thin {
+        margin-bottom: 106px;
+      }
+    }
+  }
+}

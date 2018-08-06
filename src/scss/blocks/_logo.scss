@@ -1,0 +1,36 @@
+.logo {
+  width: 150px;
+  height: 67px;
+  &--yellow {
+    width: 150px;
+    height: 67px;
+  }
+  &--black {
+    width: 80px;
+    height: 35px;
+  }
+}
+
+@media #{$tablet-width} {
+  .logo {
+    width: 280px;
+    height: 125px;
+    &--yellow {
+      width: 150px;
+      height: 67px;
+    }
+    &--black {
+      width: 80px;
+      height: 35px;
+    }
+  }
+}
+
+@media #{$desktop-width} {
+  .logo {
+    &--black {
+      width: 135px;
+      height: 60px;
+    }
+  }
+}

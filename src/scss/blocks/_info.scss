@@ -1,0 +1,88 @@
+.info {
+  background: url("../img/custom-white-bg@1x.jpg") no-repeat center;
+  background-size: cover;
+  &__wrapper {
+    @include container;
+    padding: 58px 15px 60px;
+  }
+  &__btn {
+    &:not(:last-of-type) {
+      margin-bottom: 15px;
+    }
+  }
+  &__title {
+    margin-bottom: 52px;
+  }
+  &__picture {
+    display: block;
+    width: 290px;
+    height: 167px;
+    margin: 0 auto 36px;
+  }
+  &__text {
+    margin-bottom: 24px;
+    text-align: left;
+  }
+}
+
+@media #{$tablet-width} {
+  .info {
+    &__wrapper {
+      padding: 47px 64px 60px;
+    }
+    &__title {
+      margin-bottom: 40px;
+    }
+    &__picture {
+      width: 530px;
+      height: 305px;
+      margin-bottom: 35px;
+    }
+    &__text {
+      margin-bottom: 35px;
+    }
+    &__container {
+      display: flex;
+    }
+    &__btn {
+      &:not(:last-of-type) {
+        margin: 0 30px 0 0;
+      }
+    }
+  }
+}
+
+@media #{$desktop-width} {
+  .info {
+    &__wrapper {
+      position: relative;
+      padding: 120px 15px 120px 600px;
+    }
+    &__title {
+      margin-bottom: 36px;
+      text-align: left;
+    }
+    &__picture {
+      @include vertical-center;
+      left: 15px;
+      width: 556px;
+      height: 320px;
+      margin-bottom: 0;
+    }
+    &__text {
+      margin-bottom: 24px;
+    }
+    &__container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &__btn {
+      width: initial;
+      flex: 1 1 auto;
+      padding: 0 10px;
+      &:not(:last-of-type) {
+        margin: 0 20px 0 0;
+      }
+    }
+  }
+}

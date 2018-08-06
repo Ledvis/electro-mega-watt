@@ -1,0 +1,58 @@
+.partners {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:not(:last-of-type) {
+      margin-bottom: 40px;
+    }
+    &--first {
+      width: 30%;
+      img {
+        width: 73px;
+        height: 45px;
+      }
+    }
+    &--second {
+      width: 30%;
+      img {
+        width: 39px;
+        height: 45px;
+      }
+    }
+    &--third {
+      width: 30%;
+      img {
+        width: 73px;
+        height: 28px;
+      }
+    }
+    &--fourth {
+      width: 40%;
+      img {
+        width: 125px;
+        height: 25px;
+      }
+    }
+    &--fifth {
+      width: 40%;
+      img {
+        width: 121px;
+        height: 25px;
+      }
+    }
+    &--sixth {
+      width: 100%;
+      img {
+        width: 97px;
+        height: 25px;
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+.text {
+  margin: 0;
+  font-family: $main-font;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  &--gray {
+    color: rgb(28, 28, 28);
+  }
+  &--white {
+    color: rgb(255, 255, 255);
+  }
+  &--line-height-big {
+    line-height: 24px;
+  }
+  strong {
+    color: rgb(249, 220, 98);
+    font-weight: 400;
+  }
+  b {
+    font-weight: 500;
+  }
+}
+
+@media #{$tablet-width} {
+  .text {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+@media #{$desktop-width} {
+  .text {
+    font-size: 21px;
+    line-height: 31px;
+  }
+}

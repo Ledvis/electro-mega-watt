@@ -1,0 +1,67 @@
+.title {
+  position: relative;
+  margin: 0;
+  font-family: $main-font;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 29px;
+  text-transform: uppercase;
+  text-align: center;
+  &--black {
+    color: rgb(0, 0, 0);
+  }
+  &--white {
+    color: rgb(255, 255, 255);
+  }
+  &--thin {
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 27px;
+  }
+  span {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: -9px;
+      left: 0;
+      height: 3px;
+      background-color: rgb(249, 220, 98);
+    }
+  }
+}
+
+@media #{$tablet-width} {
+  .title {
+    font-size: 35px;
+    line-height: 40px;
+    span {
+      position: relative;
+      &::before {
+        bottom: -6px;
+      }
+    }
+    &--thin {
+      font-size: 21px;
+      line-height: 27px;
+    }
+  }
+}
+
+@media #{$desktop-width} {
+  .title {
+    font-size: 50px;
+    line-height: 56.1px;
+    span {
+      &::before {
+        height: 5px;
+        bottom: -15px;
+      }
+    }
+    &--thin {
+      font-size: 26px;
+      line-height: 27px;
+    }
+  }
+}

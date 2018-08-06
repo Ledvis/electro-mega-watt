@@ -1,0 +1,114 @@
+.team {
+  background-color: rgb(248, 248, 254);
+  &__wrapper {
+    @include container;
+    padding: 58px 15px 60px;
+  }
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__container {
+    position: relative;
+    width: 290px;
+    height: 290px;
+    margin: 0 auto 50px;
+    box-sizing: border-box;
+  }
+  &__item {
+    position: relative;
+    &:not(:last-of-type) {
+      margin-bottom: 36px;
+    }
+  }
+  &__title {
+    margin-bottom: 50px;
+  }
+  &__member {
+    display: block;
+    width: 290px;
+    height: 290px;
+    box-sizing: border-box;
+    border: 5px solid rgb(224, 224, 224);
+    border-bottom-color: transparent;
+  }
+  &__social {
+    position: absolute;
+    bottom: -28px;
+    left: 0;
+    right: 0;
+  }
+  &__subtitle {
+    margin: 0 0 12px;
+    color: rgb(30, 30, 30);
+    font-family: $main-font;
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 27px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}
+
+@media #{$tablet-width} {
+  .team {
+    &__wrapper {
+      padding: 47px 15px 25px;
+    }
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    &__item {
+      width: 354px;
+      text-align: center;
+      &:not(:last-of-type) {
+        margin-bottom: 35px;
+      }
+    }
+    &__title {
+      margin-bottom: 35px;
+    }
+    &__container {
+      width: 354px;
+      height: 354px;
+      margin: 0 0 60px;
+    }
+    &__member {
+      width: 354px;
+      height: 354px;
+    }
+  }
+}
+
+@media #{$desktop-width} {
+  .team {
+    &__wrapper {
+      padding: 117px 15px 80px;
+    }
+    &__item {
+      width: 360px;
+      &:not(:last-of-type) {
+        margin-bottom: 80px;
+      }
+    }
+    &__title {
+      margin-bottom: 84px;
+    }
+    &__container {
+      width: 360px;
+      height: 360px;
+    }
+    &__member {
+      width: 360px;
+      height: 360px;
+    }
+    &__subtitle {
+      margin-bottom: 16px;
+      font-size: 26px;
+      line-height: 27px;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.form {
+  &__element {
+    width: 100%;
+    padding: 12px 20px;
+    color: rgb(255, 255, 255);
+    font-family: $main-font;
+    font-size: 21px;
+    line-height: 27px;
+    font-weight: 400;
+    background-color: transparent;
+    border: 5px solid rgb(255, 255, 255);
+    box-sizing: border-box;
+    transition: border 0.35s;
+    &:hover {
+      border-color: rgb(249, 220, 98);
+    }
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+    &::placeholder {
+      color: rgb(255, 255, 255);
+      font-family: $main-font;
+      font-size: 21px;
+      line-height: 27px;
+      font-weight: 400;
+    }
+    textarea {
+      min-height: 89px;
+    }
+  }
+}
+
+@media #{$desktop-width} {
+  .form {
+    &__element {
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+      &:not(:first-child) {
+        margin-top: 20px;
+      }
+    }
+    &__btn {
+      margin-top: 40px;
+    }
+  }
+}

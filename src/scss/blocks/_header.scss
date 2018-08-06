@@ -1,0 +1,193 @@
+.header {
+  position: relative;
+  height: 100vh;
+  background: rgb(59, 75, 82) url("../img/header-bg@1x.jpg") no-repeat left -145px center;
+  background-size: cover;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 157px 0;
+  }
+  &__slogan {
+    margin-top: 45px;
+    color: rgb(255, 255, 255);
+    font-family: $main-font;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 30px;
+    text-transform: uppercase;
+  }
+  &__link {
+    @include horizontal-center;
+    bottom: 0;
+    padding-bottom: 60px;
+    color: rgb(255, 255, 255);
+    font-family: $main-font;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    &::before {
+      @include horizontal-center;
+      content: "";
+      bottom: 20px;
+      width: 27px;
+      height: 16px;
+      background: url("../img/arrow-bottom.svg") no-repeat center;
+      background-size: cover;
+      transition: background 0.35s;
+    }
+    &:hover {
+      &::before {
+        background: url("../img/arrow-bottom-yellow.svg") no-repeat center;
+        background-size: cover;
+      }
+    }
+  }
+  &__play {
+    display: none;
+  }
+  &__video {
+    display: none;
+  }
+}
+
+@media #{$tablet-width} {
+  .header {
+    &__wrapper {
+      padding: 286px 15px 0;
+    }
+    &__slogan {
+      margin-top: 65px;
+      font-size: 90px;
+      line-height: 90px;
+    }
+    &__link {
+      font-size: 21px;
+      line-height: 21px;
+    }
+  }
+}
+
+@media #{$desktop-width} {
+  .header {
+    background-position: center;
+    &__wrapper {
+      position: relative;
+      max-width: 1920px;
+      height: 100%;
+      margin: 0 auto;
+      padding: 10px 30px 200px;
+      text-align: center;
+      box-sizing: border-box;
+    }
+    &__slogan {
+      margin-top: 0;
+      font-size: 130px;
+      line-height: 130px;
+    }
+    &__link {
+      bottom: 60px;
+      padding-bottom: 45px;
+      &::before {
+        bottom: 0;
+      }
+    }
+    &__play {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 120px;
+      margin: 0;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 30px;
+        height: 120px;
+        width: calc(50% - 15px);
+        background: url("../img/wave-2.svg") no-repeat center;
+        background-size: contain;
+      }
+      &::before {
+        left: -30px;
+      }
+      &::after {
+        right: -30px;
+      }
+      &--active {
+        position: absolute;
+        z-index: 16;
+        top: 25px;
+        right: 25px;
+        width: auto;
+        height: auto;
+        &::before,
+        &::after {
+          display: none;
+        }
+        .header__control {
+          width: auto;
+          height: auto;
+          border: none;
+        }
+        .header__onplay {
+          display: none;
+        }
+        .header__onpause {
+          display: inline-block;
+          margin-right: 40px;
+        }
+        .header__close {
+          display: inline-block;
+        }
+      }
+    }
+    &__control {
+      @include button-reset;
+      position: relative;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 90px;
+      height: 90px;
+      margin: 0 auto;
+      border: 5px solid rgb(255, 214, 44);
+      box-sizing: border-box;
+    }
+    &__video {
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: none;
+      width: 100%;
+      height: 100%;
+      min-height: 100%;
+      min-width: 100%;
+      object-fit: fill;
+      &--active {
+        display: block;
+        z-index: 15;
+      }
+    }
+    svg {
+      fill: white;
+      transition: fill 0.35s;
+      &:hover {
+        fill: rgb(255, 213, 0);
+      }
+    }
+    &__onpause {
+      display: none;
+    }
+    &__close {
+      display: none;
+    }
+  }
+}
