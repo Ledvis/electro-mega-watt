@@ -5,6 +5,7 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 // const StyleLintPlugin = require('stylelint-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const imageminMozjpeg = require('imagemin-mozjpeg');
+const imageminSvgo = require('imagemin-svgo');
 
 module.exports = merge(common, {
   devtool: 'source-map',
@@ -51,6 +52,10 @@ module.exports = merge(common, {
       plugins: [
         imageminMozjpeg({
           quality: 70,
+          cleanupIDs: false,
+        }),
+        imageminSvgo({
+          cleanupIDs: false,
         }),
       ],
     }),

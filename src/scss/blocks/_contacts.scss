@@ -149,7 +149,11 @@
     }
     &__logo {
       width: 100%;
-      margin: 0 auto 38px;
+      margin-bottom: 38px;
+      .logo {
+        display: block;
+        margin: 0 auto;
+      }
     }
     &__list {
       order: 1;
