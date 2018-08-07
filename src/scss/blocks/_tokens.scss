@@ -1,5 +1,5 @@
 .tokens {
-  background: url("../img/custom-white-bg@1x.jpg") no-repeat center;
+  background: url("/img/custom-white-bg@1x.jpg") no-repeat center;
   background-size: cover;
   &__wrapper {
     @include container;
@@ -31,31 +31,31 @@
     }
     &--first {
       &::before {
-        background: url("../img/token-item-1.svg") no-repeat center;
+        background: url("/img/token-item-1.svg") no-repeat center;
         background-size: cover;
       }
     }
     &--second {
       &::before {
-        background: url("../img/token-item-2.svg") no-repeat center;
+        background: url("/img/token-item-2.svg") no-repeat center;
         background-size: cover;
       }
     }
     &--third {
       &::before {
-        background: url("../img/token-item-3.svg") no-repeat center;
+        background: url("/img/token-item-3.svg") no-repeat center;
         background-size: cover;
       }
     }
     &--fourth {
       &::before {
-        background: url("../img/token-item-4.svg") no-repeat center;
+        background: url("/img/token-item-4.svg") no-repeat center;
         background-size: cover;
       }
     }
     &--fifth {
       &::before {
-        background: url("../img/token-item-5.svg") no-repeat center;
+        background: url("/img/token-item-5.svg") no-repeat center;
         background-size: cover;
       }
     }

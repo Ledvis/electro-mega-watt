@@ -1,5 +1,5 @@
 .statistics {
-  background: rgb(80, 86, 88) url("../img/statistics-bg@1x.jpg") no-repeat left -550px top;
+  background: rgb(80, 86, 88) url("/img/statistics-bg@1x.jpg") no-repeat left -550px top;
   background-size: cover;
   &__wrapper {
     @include container;
@@ -30,7 +30,7 @@
         bottom: 0;
         width: 240px;
         height: 281px;
-        background: url("../img/diagram-single.svg") no-repeat center;
+        background: url("/img/diagram-single.svg") no-repeat center;
         background-size: cover;
       }
     }
@@ -43,7 +43,7 @@
         top: 60px;
         width: 221px;
         height: 292px;
-        background: url("../img/diagram-quarto.svg") no-repeat center;
+        background: url("/img/diagram-quarto.svg") no-repeat center;
         background-size: cover;
       }
       .statistics__subitem {
@@ -64,7 +64,7 @@
         top: 60px;
         width: 247px;
         height: 255px;
-        background: url("../img/diagram-triple.svg") no-repeat center;
+        background: url("/img/diagram-triple.svg") no-repeat center;
         background-size: cover;
       }
       .statistics__subitem {
@@ -116,7 +116,7 @@
         &::before {
           width: 300px;
           height: 381px;
-          background: url("../img/diagram-single-tl.svg") no-repeat center;
+          background: url("/img/diagram-single-tl.svg") no-repeat center;
           background-size: cover;
         }
       }
@@ -126,7 +126,7 @@
           top: 85px;
           width: 267px;
           height: 379px;
-          background: url("../img/diagram-quarto-tl.svg") no-repeat center;
+          background: url("/img/diagram-quarto-tl.svg") no-repeat center;
           background-size: cover;
         }
         .statistics__subitem {
@@ -144,7 +144,7 @@
           top: 85px;
           width: 267px;
           height: 305px;
-          background: url("../img/diagram-triple-tl.svg") no-repeat center;
+          background: url("/img/diagram-triple-tl.svg") no-repeat center;
           background-size: cover;
         }
         .statistics__subitem {
@@ -184,7 +184,7 @@
         &::before {
           width: 300px;
           height: 381px;
-          background: url("../img/diagram-single-tl.svg") no-repeat center;
+          background: url("/img/diagram-single-tl.svg") no-repeat center;
           background-size: cover;
         }
       }
@@ -195,7 +195,7 @@
         &::before {
           width: 267px;
           height: 379px;
-          background: url("../img/diagram-quarto-tl.svg") no-repeat center;
+          background: url("/img/diagram-quarto-tl.svg") no-repeat center;
           background-size: cover;
         }
         .statistics__subitem {
@@ -210,7 +210,7 @@
         &::before {
           width: 267px;
           height: 305px;
-          background: url("../img/diagram-triple-tl.svg") no-repeat center;
+          background: url("/img/diagram-triple-tl.svg") no-repeat center;
           background-size: cover;
         }
       }

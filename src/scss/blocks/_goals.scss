@@ -1,5 +1,5 @@
 .goals {
-  background: rgb(12, 59, 71) url("../img/goals-bg@1x.jpg") no-repeat center;
+  background: rgb(12, 59, 71) url("/img/goals-bg@1x.jpg") no-repeat center;
   background-size: cover;
   &__wrapper {
     @include container;

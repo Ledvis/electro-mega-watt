@@ -1,7 +1,7 @@
 .header {
   position: relative;
   height: 100vh;
-  background: rgb(59, 75, 82) url("../img/header-bg@1x.jpg") no-repeat left -145px center;
+  background: rgb(59, 75, 82) url("/img/header-bg@1x.jpg") no-repeat left -145px center;
   background-size: cover;
   &__wrapper {
     display: flex;
@@ -36,13 +36,13 @@
       bottom: 20px;
       width: 27px;
       height: 16px;
-      background: url("../img/arrow-bottom.svg") no-repeat center;
+      background: url("/img/arrow-bottom.svg") no-repeat center;
       background-size: cover;
       transition: background 0.35s;
     }
     &:hover {
       &::before {
-        background: url("../img/arrow-bottom-yellow.svg") no-repeat center;
+        background: url("/img/arrow-bottom-yellow.svg") no-repeat center;
         background-size: cover;
       }
     }
@@ -109,7 +109,7 @@
         bottom: 30px;
         height: 120px;
         width: calc(50% - 15px);
-        background: url("../img/wave-2.svg") no-repeat center;
+        background: url("/img/wave-2.svg") no-repeat center;
         background-size: contain;
       }
       &::before {
