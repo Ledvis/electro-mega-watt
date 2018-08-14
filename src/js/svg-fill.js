@@ -1,4 +1,4 @@
-/*eslint-disable */
+// /*eslint-disable */
 
 require('waypoints/lib/noframework.waypoints.min.js');
 

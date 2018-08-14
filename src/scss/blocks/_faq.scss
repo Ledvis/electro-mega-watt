@@ -2,46 +2,36 @@
   background: url("/img/custom-white-bg@1x.jpg") no-repeat center;
   background-size: cover;
   background-attachment: fixed;
-
   &__wrapper {
     @include container;
-
     padding: 58px 15px 60px;
   }
-
   &__title {
     margin-bottom: 45px;
   }
-
   &__list {
-    margin: 0 0 40px;
+    margin: 0;
     padding: 0;
     list-style: none;
   }
-
   &__item {
     position: relative;
     box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.2);
-
     &:not(:last-of-type) {
       margin-bottom: 25px;
     }
-
     input {
       position: absolute;
       opacity: 0;
       z-index: -1;
-
-      &:checked ~ {
+      &:checked~ {
         .faq__content {
           display: block;
           max-height: 1000px;
         }
-
         .faq__caption {
           font-weight: 500;
           border-bottom: 3px solid rgb(224, 224, 224);
-
           &::before {
             content: "−";
             color: rgba(0, 0, 0, 0.9);
@@ -51,7 +41,6 @@
       }
     }
   }
-
   &__caption {
     position: relative;
     display: flex;
@@ -68,10 +57,8 @@
     background-color: rgb(255, 255, 255);
     box-sizing: border-box;
     cursor: pointer;
-
     &::before {
       @include vertical-center;
-
       content: "+";
       right: 5px;
       width: 50px;
@@ -87,14 +74,12 @@
       box-sizing: border-box;
     }
   }
-
   &__content {
     max-height: 0;
     background-color: rgb(255, 255, 255);
     overflow: hidden;
     transition: max-height 0.35s;
   }
-
   &__text {
     margin: 0;
     padding: 17px 30px 26px 16px;
@@ -104,7 +89,6 @@
     font-weight: 400;
     line-height: 24px;
   }
-
   &__btn {
     text-align: center;
   }
@@ -115,24 +99,20 @@
     &__wrapper {
       padding: 47px 15px 60px;
     }
-
     &__item {
       &:not(:last-of-type) {
         margin-bottom: 30px;
       }
     }
-
     &__caption {
       font-size: 26px;
       line-height: 36px;
     }
-
     &__text {
       padding: 15px 15px;
       font-size: 21px;
       line-height: 31px;
     }
-
     &__btn {
       width: 355px;
       margin: 0 auto;
@@ -145,18 +125,15 @@
     &__wrapper {
       padding: 117px 210px 120px;
     }
-
     &__item {
       &:not(:last-of-type) {
         margin-bottom: 30px;
       }
     }
-
     &__caption {
       font-size: 26px;
       line-height: 36px;
     }
-
     &__text {
       padding: 15px 15px;
       font-size: 21px;

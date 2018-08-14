@@ -1,27 +1,26 @@
-import Swiper from 'swiper';
-
-function init() {
-  const title = document.querySelector('.title--thin span');
-  const swiper = new Swiper('.swiper-container', {
+export default function init() {
+  const audioRoadmap = document.querySelector('#audio-roadmap');
+  const swiperRoadmap = new Swiper('.roadmap-slider-container', {
+    slidesPerView: 'auto',
+    spaceBetween: 0,
+    centeredSlides: true,
     slideToClickedSlide: 'true',
     grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: 'auto',
-    // slidesPerView: 1,
-    // spaceBetween: 30,
-    // freeMode: true,
-    // pagination: {
-    //   clickable: true,
-    // },
+    onSlideChangeStart() {
+      audioRoadmap.muted = false;
+      audioRoadmap.play();
+    },
   });
 
-  swiper.slideTo(2, 1000, false);
+  swiperRoadmap.slideTo(2, 0, false);
 
-  swiper.on('setTransition', () => {
-    const slide = document.querySelector('.swiper-slide-active');
-    const date = slide.querySelector('.swiper-date').innerHTML;
-    title.innerHTML = date;
+  swiperRoadmap.on('setTranslate', () => {
+    const swiperSubtitles = document.querySelectorAll('.swiper-slide h4');
+    swiperSubtitles.forEach((el) => {
+      if (el.parentNode.classList.contains('swiper-slide-active')) {
+        const titleRoadmap = document.querySelector('h3.roadmap__title span');
+        titleRoadmap.innerText = el.textContent;
+      }
+    });
   });
 }
-
-export default init;
