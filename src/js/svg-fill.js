@@ -1,17 +1,20 @@
+/*eslint-disable */
+
 require('waypoints/lib/noframework.waypoints.min.js');
 
-const Param = {
-  TIMEOUT: 100,
+const PARAM = {
+  SHORT_TIMEOUT: 100,
+  LONG_TIMEOUT: 1000,
   MOBILE_OFFSET: '400',
   DESKTOP_OFFSET: '500',
 };
 
-function delay() {
-  return new Promise(resolve => setTimeout(resolve, Param.TIMEOUT));
+function delay(timeout) {
+  return new Promise(resolve => setTimeout(resolve, timeout));
 }
 
 async function fillIcons(item) {
-  await delay();
+  await delay(PARAM.SHORT_TIMEOUT);
   item.style.fill = 'rgb(255, 214, 44)';
 }
 
@@ -30,26 +33,29 @@ function generateRectArr(itemClass) {
 
 const goalItems = document.querySelectorAll('.goals__item');
 
-function initWayPoint(offsetTop) {
-  goalItems.forEach((item, index) => {
-    const itemClass = `.goals__item--${index}`;
+async function initWayPoint(offsetTop) {
+  let i = 0;
+  for (const item of goalItems) {
+    await delay(PARAM.LONG_TIMEOUT);
+    const itemClass = `.goals__item--${i++}`;
     if (item.matches(itemClass)) {
-      const waypoint = new Waypoint({
+      new Waypoint({
         element: document.querySelector(itemClass),
         handler() {
           generateRectArr(itemClass);
+          if (offsetTop >= PARAM.DESKTOP_OFFSET) {}
         },
         offset: offsetTop,
       });
     }
-  });
+  }
 }
 
 function mediaListener(screenSize) {
   if (screenSize.matches) {
-    initWayPoint(Param.MOBILE_OFFSET);
+    initWayPoint(PARAM.MOBILE_OFFSET);
   } else {
-    initWayPoint(Param.DESKTOP_OFFSET);
+    initWayPoint(PARAM.DESKTOP_OFFSET);
   }
 }
 

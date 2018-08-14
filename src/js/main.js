@@ -4,9 +4,10 @@ import fillIcons from './svg-fill';
 import playVideo from './video';
 
 const navLinks = document.querySelectorAll('.smooth-toggler');
-const nav = document.querySelector('.navigation__panel');
-const navList = document.querySelector('.navigation__list');
-const navHamburger = document.querySelector('.navigation__hamburger');
+const nav = document.querySelector('.navigation');
+const navLogo = nav.querySelector('img');
+const navList = nav.querySelector('.navigation__list');
+const navHamburger = nav.querySelector('.navigation__hamburger');
 const scroll = new SmoothScroll();
 
 function addScroll(content, toggler, options = {
@@ -20,23 +21,31 @@ function addScroll(content, toggler, options = {
   );
 }
 
-navLinks.forEach((link) => {
-  link.addEventListener('click', () => {
-    const selector = link.getAttribute('href');
-    const content = document.querySelector(selector);
-    addScroll(content, link);
-  });
-});
-
 function fixNav() {
   if (window.scrollY >= 5) {
-    nav.classList.add('navigation__panel--show');
+    nav.classList.add('navigation--show');
     navHamburger.classList.add('navigation__hamburger--black');
+    navLogo.src = 'img/logo-black.svg';
   } else {
-    nav.classList.remove('navigation__panel--show');
+    nav.classList.remove('navigation--show');
     navHamburger.classList.remove('navigation__hamburger--black');
+    navLogo.src = 'img/logo-white.svg';
   }
 }
+
+function onLinkClick(link) {
+  const selector = link.getAttribute('href');
+  const content = document.querySelector(selector);
+  addScroll(content, link);
+  navList.classList.remove('navigation__list--active');
+  navHamburger.classList.remove('navigation__hamburger--active');
+}
+
+navLinks.forEach((link) => {
+  link.addEventListener('click', () => {
+    onLinkClick(link);
+  });
+});
 
 function showNav(evt) {
   evt.preventDefault();

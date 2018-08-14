@@ -1,4 +1,9 @@
 .navigation {
+  &--show {
+    .navigation__panel {
+      opacity: 1;
+    }
+  }
   &__list {
     display: none;
     &--active {
@@ -47,8 +52,8 @@
     box-sizing: border-box;
     opacity: 0;
     transition: opacity 0.35s;
-    &--show {
-      opacity: 1;
+    &--hide {
+      display: none;
     }
   }
   &__toggler {
@@ -125,11 +130,27 @@
 
 @media #{$desktop-width} {
   .navigation {
+    position: fixed;
+    z-index: 10;
+    top: 0;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     width: 100%;
     margin-bottom: 0;
+    padding: 10px 30px;
+    background-color: transparent;
+    box-sizing: border-box;
+    transition: background 0.35s;
+    &--show {
+      background-color: white;
+      .navigation__link {
+        color: black;
+      }
+      .lang__value {
+        color: black;
+      }
+    }
     &__list {
       flex-grow: 1;
       display: flex;

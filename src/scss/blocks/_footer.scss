@@ -1,17 +1,13 @@
 .footer {
   background: rgb(0, 11, 34) url("/img/footer-bg@1x.jpg") no-repeat center;
   background-size: cover;
-
   &__wrapper {
     @include container;
-
-    padding: 58px 15px 0;
+    padding: 0 15px 0;
   }
-
   &__title {
     margin-bottom: 49px;
   }
-
   &__partners {
     margin-bottom: 60px;
   }
@@ -20,13 +16,11 @@
 @media #{$tablet-width} {
   .footer {
     &__wrapper {
-      padding: 47px 15px 0;
+      padding: 0 15px 0;
     }
-
     &__title {
       margin-bottom: 40px;
     }
-
     &__partners {
       margin-bottom: 80px;
     }
@@ -36,13 +30,11 @@
 @media #{$desktop-width} {
   .footer {
     &__wrapper {
-      padding: 117px 15px 0;
+      padding: 0 15px 0;
     }
-
     &__title {
       margin-bottom: 82px;
     }
-
     &__partners {
       margin-bottom: 120px;
     }
