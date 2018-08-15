@@ -62,7 +62,18 @@
           </ul>
         </div>
       </nav>
-      <img class="logo" src="img/logo.svg" alt="Electro Mega Watt Logotype">
+      <div class="logo">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 450 200">
+          <defs>
+            <clipPath id="clip-path">
+              <rect id="rect" x="50" y="50" height="100" width="350"/>
+            </clipPath>
+          </defs>
+          <path d="M175 150h20V70h60v80h20V50H175v100zm-80-40h60V90H95v20zm260-60h-20v60h20V50zm20 0v80h-60V50h-20v100h100V50h-20zM215 150h20V90h-20v60zm-160 0h100v-20H75V70h80V50H55v100z" fill="#ffd600"/>
+          <path clip-path="url(#clip-path)" d="M175 150h20V70h60v80h20V50H175v100zm-80-40h60V90H95v20zm260-60h-20v60h20V50zm20 0v80h-60V50h-20v100h100V50h-20zM215 150h20V90h-20v60zm-160 0h100v-20H75V70h80V50H55v100z" fill="#fff"/>
+          <path d="M430 20v160H20V20h410m20-20H0v200h450V0z" fill="#ffd600"/><defs>
+        </svg>
+      </div>
       <div class="header__play">
         <button class="header__control" type="button">
           <svg class="header__onplay  header__btn" viewBox="0 0 40 50" width="40" height="50">
@@ -283,92 +294,135 @@
         </div>
       </div>
     </div>
-    </div>
-    </div>
     <section id="team" class="team">
       <div class="team__wrapper">
         <h2 class="team__title  title  title--black"><span>Team</span></h2>
         <ul class="team__list">
           <article class="team__item">
-            <div class="team__container">
-              <picture>
-                <source media="(min-width: 768px)" srcset="img/team-member-1@tl-1x.png 1x, img/team-member-1@tl-2x.png 2x">
-                <img class="team__member" src="img/team-member-1@mb-1x.png" srcset="img/team-member-1@mb-2x.png 2x" alt="Team member">
-              </picture>
-              <div class="team__social  social  social--horizontal-line">
-                <a class="social__item  social__item--white  social__item--facebook" href="#">facebook</artivl>
-                <a class="social__item  social__item--white  social__item--twitter" href="#">twitter</a>
-                <a class="social__item  social__item--white  social__item--linkedin" href="#">linkedin</a>
+            <div class="team__card">
+              <div class="team__pointer"></div>
+              <div class="team__front">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="img/team-member-1@tl-1x.png 1x, img/team-member-1@tl-2x.png 2x">
+                  <img class="team__member" src="img/team-member-1@mb-1x.png" srcset="img/team-member-1@mb-2x.png 2x" alt="Team member">
+                </picture>
+                <div class="team__social  social  social--horizontal-line">
+                  <a class="social__item  social__item--white  social__item--facebook" href="#">facebook</artivl>
+                  <a class="social__item  social__item--white  social__item--twitter" href="#">twitter</a>
+                  <a class="social__item  social__item--white  social__item--linkedin" href="#">linkedin</a>
+                </div>
+              </div>
+              <div class="team__back">
+                <p class="text  team__text">Сооснователь компании Electro Ukraine и города будущего El’City.</p>
               </div>
             </div>
             <h5 class="team__subtitle">Анатолий Кравцов</h5>
-            <p class="text  text--line-height-big">Академик Украинской академии наук, физик, изобретатель. Сооснователь компании Electro Ukraine и города будущего El’City.</p>
+            <p class="team__text  text  text--line-height-big">Академик Украинской академии наук, физик, изобретатель.</p>
           </article>
           <article class="team__item">
-            <div class="team__container">
-              <picture>
-                <source media="(min-width: 768px)" srcset="img/team-member-2@tl-1x.png 1x, img/team-member-2@tl-2x.png 2x">
-                <img class="team__member" src="img/team-member-2@mb-1x.png" srcset="img/team-member-2@mb-2x.png 2x" alt="Team member">
-              </picture>
-              <div class="team__social  social  social--horizontal-line">
-                <a class="social__item  social__item--white  social__item--linkedin" href="#">linkedin</a>
+            <div class="team__card">
+              <div class="team__pointer"></div>
+              <div class="team__front">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="img/team-member-2@tl-1x.png 1x, img/team-member-2@tl-2x.png 2x">
+                  <img class="team__member" src="img/team-member-2@mb-1x.png" srcset="img/team-member-2@mb-2x.png 2x" alt="Team member">
+                </picture>
+                <div class="team__social  social  social--horizontal-line">
+                  <a class="social__item  social__item--white  social__item--facebook" href="#">facebook</artivl>
+                  <a class="social__item  social__item--white  social__item--twitter" href="#">twitter</a>
+                  <a class="social__item  social__item--white  social__item--linkedin" href="#">linkedin</a>
+                </div>
+              </div>
+              <div class="team__back">
+                <p class="text  team__text">Один из основателей компании Electro Ukraine. Один из создателей города будущего El’City.</p>
               </div>
             </div>
             <h5 class="team__subtitle">Владимир Тарасов</h5>
-            <p class="text  text--line-height-big">Член-кореспондент Украинской Академии Наук. Один из основателей компании Electro Ukraine. Один из создателей города будущего El’City.</p>
+            <p class="team__text  text  text--line-height-big">Член-кореспондент Украинской Академии Наук.</p>
           </article>
           <article class="team__item">
-            <div class="team__container">
-              <picture>
-                <source media="(min-width: 768px)" srcset="img/team-member-3@tl-1x.png 1x, img/team-member-3@tl-2x.png 2x">
-                <img class="team__member" src="img/team-member-3@mb-1x.png" srcset="img/team-member-3@mb-2x.png 2x" alt="Team member">
-              </picture>
-              <div class="team__social  social  social--horizontal-line">
-                <a class="social__item  social__item--white  social__item--linkedin" href="#">linkedin</a>
+            <div class="team__card">
+              <div class="team__pointer"></div>
+              <div class="team__front">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="img/team-member-3@tl-1x.png 1x, img/team-member-3@tl-2x.png 2x">
+                  <img class="team__member" src="img/team-member-3@mb-1x.png" srcset="img/team-member-1@mb-2x.png 2x" alt="Team member">
+                </picture>
+                <div class="team__social  social  social--horizontal-line">
+                  <a class="social__item  social__item--white  social__item--facebook" href="#">facebook</artivl>
+                  <a class="social__item  social__item--white  social__item--twitter" href="#">twitter</a>
+                  <a class="social__item  social__item--white  social__item--linkedin" href="#">linkedin</a>
+                </div>
+              </div>
+              <div class="team__back">
+                <p class="text  team__text">Also was network architect and developer at SinceTV project.</p>
               </div>
             </div>
             <h5 class="team__subtitle">Владислав Галасюк</h5>
-            <p class="text  text--line-height-big">Lead Blockchain Developer, Network Architect, Solidity developer. Also was network architect and developer at SinceTV project.</p>
+            <p class="team__text  text  text--line-height-big">Lead Blockchain Developer, Network Architect, Solidity developer.</p>
           </article>
           <article class="team__item">
-            <div class="team__container">
-              <picture>
-                <source media="(min-width: 768px)" srcset="img/team-member-4@tl-1x.png 1x, img/team-member-4@tl-2x.png 2x">
-                <img class="team__member" src="img/team-member-4@mb-1x.png" srcset="img/team-member-4@mb-2x.png 2x" alt="Team member">
-              </picture>
-              <div class="team__social  social  social--horizontal-line">
-                <a class="social__item  social__item--white  social__item--linkedin" href="#">linkedin</a>
+            <div class="team__card">
+              <div class="team__pointer"></div>
+              <div class="team__front">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="img/team-member-4@tl-1x.png 1x, img/team-member-4@tl-2x.png 2x">
+                  <img class="team__member" src="img/team-member-4@mb-1x.png" srcset="img/team-member-4@mb-2x.png 2x" alt="Team member">
+                </picture>
+                <div class="team__social  social  social--horizontal-line">
+                  <a class="social__item  social__item--white  social__item--facebook" href="#">facebook</artivl>
+                  <a class="social__item  social__item--white  social__item--twitter" href="#">twitter</a>
+                  <a class="social__item  social__item--white  social__item--linkedin" href="#">linkedin</a>
+                </div>
+              </div>
+              <div class="team__back">
+                <p class="text  team__text">Имеет более 20 лет опыта работы на руководящих должностях в компаниях различной специализации: информационные технологии; автоматизированные системы мониторинга GPS; строительство СЭС.</p>
               </div>
             </div>
             <h5 class="team__subtitle">Лесечко Сергей</h5>
-            <p class="text  text--line-height-big">Операционный директор Имеет более 20 лет опыта работы на руководящих должностях в компаниях различной специализации: информационные технологии; автоматизированные системы мониторинга GPS; строительство СЭС.</p>
+            <p class="team__text  text  text--line-height-big">Операционный директор.</p>
           </article>
           <article class="team__item">
-            <div class="team__container">
-              <picture>
-                <source media="(min-width: 768px)" srcset="img/team-member-5@tl-1x.png 1x, img/team-member-5@tl-2x.png 2x">
-                <img class="team__member" src="img/team-member-5@mb-1x.png" srcset="img/team-member-5@mb-2x.png 2x" alt="Team member">
-              </picture>
-              <div class="team__social  social  social--horizontal-line">
-                <a class="social__item  social__item--white  social__item--linkedin" href="#">linkedin</a>
+            <div class="team__card">
+              <div class="team__pointer"></div>
+              <div class="team__front">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="img/team-member-5@tl-1x.png 1x, img/team-member-5@tl-2x.png 2x">
+                  <img class="team__member" src="img/team-member-5@mb-1x.png" srcset="img/team-member-5@mb-2x.png 2x" alt="Team member">
+                </picture>
+                <div class="team__social  social  social--horizontal-line">
+                  <a class="social__item  social__item--white  social__item--facebook" href="#">facebook</artivl>
+                  <a class="social__item  social__item--white  social__item--twitter" href="#">twitter</a>
+                  <a class="social__item  social__item--white  social__item--linkedin" href="#">linkedin</a>
+                </div>
+              </div>
+              <div class="team__back">
+                <p class="text  team__text">25 лет опыта работы в энергетической сфере компании Укрзалізниці. Более 1000 установленных зарядных станций и комплексов. Разработка и внедрение новейших технологий в области энергетики.</p>
               </div>
             </div>
             <h5 class="team__subtitle">Валентин Стретович</h5>
-            <p class="text  text--line-height-big">Инженер-технолог. 25 лет опыта работы в энергетической сфере компании Укрзалізниці. Более 1000 установленных зарядных станций и комплексов. Разработка и внедрение новейших технологий в области энергетики.</p>
+            <p class="team__text  text  text--line-height-big">Инженер-технолог.</p>
           </article>
           <article class="team__item">
-            <div class="team__container">
-              <picture>
-                <source media="(min-width: 768px)" srcset="img/team-member-6@tl-1x.png 1x, img/team-member-6@tl-2x.png 2x">
-                <img class="team__member" src="img/team-member-6@mb-1x.png" srcset="img/team-member-6@mb-2x.png 2x" alt="Team member">
-              </picture>
-              <div class="team__social  social  social--horizontal-line">
-                <a class="social__item  social__item--white  social__item--linkedin" href="#">linkedin</a>
+            <div class="team__card">
+              <div class="team__pointer"></div>
+              <div class="team__front">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="img/team-member-6@tl-1x.png 1x, img/team-member-6@tl-2x.png 2x">
+                  <img class="team__member" src="img/team-member-6@mb-1x.png" srcset="img/team-member-1@mb-2x.png 2x" alt="Team member">
+                </picture>
+                <div class="team__social  social  social--horizontal-line">
+                  <a class="social__item  social__item--white  social__item--facebook" href="#">facebook</artivl>
+                  <a class="social__item  social__item--white  social__item--twitter" href="#">twitter</a>
+                  <a class="social__item  social__item--white  social__item--linkedin" href="#">linkedin</a>
+                </div>
+              </div>
+              <div class="team__back">
+                <p class="text  team__text">Юрий имеет более чем десятилетний опыт работы с системной интеграцией, аналитикой и бизнес-процессами. В текущее время занимается расширением и углублением способов применения блокчейн-технологий в секторе реальной экономики.</p>
               </div>
             </div>
             <h5 class="team__subtitle">Юрий Снигур</h5>
-            <p class="text  text--line-height-big">Юрий Снигур - IT Project Manager. Юрий имеет более чем десятилетний опыт работы с системной интеграцией, аналитикой и бизнес-процессами. В текущее время занимается расширением и углублением способов применения блокчейн-технологий в секторе
-              реальной экономики.</p>
+            <p class="team__text  text  text--line-height-big">IT Project Manager.</p>
           </article>
         </ul>
       </div>

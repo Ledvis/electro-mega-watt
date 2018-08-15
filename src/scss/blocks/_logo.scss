@@ -1,27 +1,92 @@
 .logo {
-  width: 150px;
-  height: 67px;
+  position: relative;
+
+  &::before {
+    @include vertical-center;
+
+    content: "";
+    height: 33px;
+    background-color: transparent;
+    border: 5px solid rgb(255, 214, 0);
+    border-left-width: 0;
+    box-sizing: border-box;
+    animation-name: slideIn;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  svg {
+    width: 150px;
+    height: 67px;
+  }
+
   &--yellow {
     width: 150px;
     height: 67px;
   }
+
   &--black {
     width: 80px;
     height: 35px;
+  }
+
+  #rect {
+    animation-name: slideOver;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    right: -2px;
+    width: 0;
+  }
+
+  100% {
+    right: -10px;
+    width: 15px;
   }
 }
 
 @media #{$tablet-width} {
   .logo {
-    width: 280px;
-    height: 125px;
+    &::before {
+      right: -15px;
+      width: 25px;
+      height: 62px;
+      border-width: 10px;
+    }
+
+    svg {
+      width: 280px;
+      height: 125px;
+    }
+
     &--yellow {
       width: 150px;
       height: 67px;
     }
+
     &--black {
       width: 80px;
       height: 35px;
+    }
+  }
+
+  @keyframes slideIn {
+    0% {
+      right: -10px;
+      width: 0;
+    }
+
+    100% {
+      right: -20px;
+      width: 30px;
     }
   }
 }
@@ -32,5 +97,15 @@
       width: 135px;
       height: 60px;
     }
+  }
+}
+
+@keyframes slideOver {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(100%);
   }
 }

@@ -17,6 +17,7 @@
     font-size: 0;
     border: 5px solid rgb(249, 220, 98);
     box-sizing: border-box;
+    pointer-events: initial;
     &::before {
       @include absolute-center;
       content: "";

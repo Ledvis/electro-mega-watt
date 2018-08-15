@@ -57,8 +57,9 @@
 
 @media #{$tablet-width} {
   .header {
+    background-position: center;
     &__wrapper {
-      padding: 286px 15px 0;
+      padding: 200px 15px 0;
     }
     &__slogan {
       margin-top: 65px;
@@ -80,7 +81,7 @@
       max-width: 1920px;
       height: 100%;
       margin: 0 auto;
-      padding: 170px 30px 200px;
+      padding: 10% 30px;
       text-align: center;
       box-sizing: border-box;
     }

@@ -1,5 +1,4 @@
 .roadmap-slider-2 {
-  margin-top: 70px;
   h4 {
     color: rgb(0, 0, 0);
     font-family: $main-font;
@@ -11,19 +10,19 @@
   .swiper-container {
     width: 100%;
     height: 100%;
-    padding-bottom: 10px;
   }
   .swiper-slide {
     width: 200px;
     height: 200px;
-    background-color: rgba(249, 220, 98, 0.4);
+    background-color: rgb(249, 220, 98);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0 20px;
+    opacity: 0.4;
     transform: scale(0.4, 0.4);
     transition: all 0.3s ease;
-    padding: 0 20px;
     box-sizing: border-box;
   }
   .swiper-slide.swiper-slide-active {
@@ -31,7 +30,8 @@
     transition: all .3s ease;
     -webkit-transform: scale(1, 1);
     transform: scale(1, 1);
-    background-color: rgba(249, 220, 98, 1);
+    background-color: rgb(249, 220, 98);
+    opacity: 1;
     .swiper-content {
       display: block;
     }
@@ -42,14 +42,16 @@
   .swiper-slide.swiper-slide-next {
     transition: all .3s ease;
     transform: scale(0.7, 0.7);
-    background-color: rgba(249, 220, 98, 0.6);
+    background-color: rgb(249, 220, 98);
+    opacity: 0.6;
     margin-right: -10px;
     margin-left: 10px;
   }
   .swiper-slide.swiper-slide-prev {
     transition: all .3s ease;
     transform: scale(0.7, 0.7);
-    background-color: rgba(249, 220, 98, 0.6);
+    background-color: rgb(249, 220, 98);
+    opacity: 0.6;
     margin-left: -10px;
     margin-right: 10px;
   }
@@ -79,22 +81,75 @@
 @media #{$tablet-width} {
   .roadmap-slider-2 {
     .swiper-slide {
+      position: relative;
       width: 250px;
-      height: 250px;
+      height: 250px; // &::before,
+      // &::after {
+      //   @include vertical-center;
+      //   content: "";
+      // }
+      &:last-of-type {
+        &::after {
+          right: -1000px;
+          width: 1000px;
+          height: 10px;
+          background-color: rgb(198, 198, 198);
+        }
+      }
+      &:first-of-type {
+        &::before {
+          left: -1000px;
+          width: 1000px;
+          height: 8px;
+          background-color: rgb(198, 198, 198);
+        }
+      }
+    }
+    .swiper-slide.swiper-slide-next {
+      margin-right: -50px;
+      margin-left: 50px;
+      &::before,
+      &::after {
+        height: 6.5px;
+        background-color: rgb(198, 198, 198);
+        width: 125px;
+        height: 8px;
+      }
+      &::before {
+        left: -125px;
+      }
+      &::after {
+        right: -125px;
+      }
+    }
+    .swiper-slide.swiper-slide-prev {
+      margin-left: -50px;
+      margin-right: 50px;
+      &::before,
+      &::after {
+        height: 6.5px;
+        background-color: rgb(198, 198, 198);
+        width: 125px;
+        height: 8px;
+      }
+      &::before {
+        left: -125px;
+      }
+      &::after {
+        right: -125px;
+      }
+    }
+    .swiper-slide.swiper-slide-active {
+      &::before,
+      &::after {
+        height: 5px;
+      }
     }
   }
 }
 
 @media #{$desktop-width} {
   .roadmap-slider-2 {
-    .swiper-slide.swiper-slide-next {
-      margin-right: -50px;
-      margin-left: 50px;
-    }
-    .swiper-slide.swiper-slide-prev {
-      margin-left: -50px;
-      margin-right: 50px;
-    }
     .swiper-content {
       strong {
         font-size: 26px;
