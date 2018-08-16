@@ -60,10 +60,13 @@
     @include button-reset;
     position: fixed;
     z-index: 11;
-    top: 15px;
-    right: 15px;
-    width: 20px;
-    height: 16px;
+    top: 5px;
+    right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
   }
   &__hamburger {
     position: relative;

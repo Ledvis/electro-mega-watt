@@ -1,6 +1,7 @@
 .goals {
   background: rgb(12, 59, 71) url("/img/goals-bg@1x.jpg") no-repeat center;
   background-size: cover;
+  background-attachment: fixed;
   &__wrapper {
     @include container;
     padding: 68px 15px 70px;
