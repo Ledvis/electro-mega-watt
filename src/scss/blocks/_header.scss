@@ -78,10 +78,11 @@
     background-position: center;
     &__wrapper {
       position: relative;
+      justify-content: space-around;
       max-width: 1920px;
       height: 100%;
       margin: 0 auto;
-      padding: 10% 30px;
+      padding: 5% 30px;
       text-align: center;
       box-sizing: border-box;
     }
@@ -91,7 +92,7 @@
       line-height: 130px;
     }
     &__link {
-      bottom: 60px;
+      bottom: 5%;
       padding-bottom: 45px;
       &::before {
         bottom: 0;

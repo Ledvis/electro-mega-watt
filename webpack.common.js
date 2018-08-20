@@ -87,9 +87,13 @@ module.exports = {
       from: './src/fonts',
       to: './fonts',
     }, {
-      from: './src/index.html',
+      context: './src/',
+      from: '**/*.html',
       to: './',
-    }]),
+      force: true,
+    }], {
+      copyUnmodified: true,
+    }),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
