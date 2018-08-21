@@ -28,11 +28,6 @@
     &__list {
       display: flex;
     }
-    &__item {
-      &:not(:last-of-type) {
-        margin-right: 15px;
-      }
-    }
     &__link {
       display: block;
       padding: 10px;

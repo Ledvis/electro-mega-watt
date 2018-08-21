@@ -5,7 +5,6 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 // const StyleLintPlugin = require('stylelint-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const imageminMozjpeg = require('imagemin-mozjpeg');
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 module.exports = merge(common, {
   devtool: 'source-map',
@@ -60,6 +59,5 @@ module.exports = merge(common, {
         }),
       ],
     }),
-    // new FaviconsWebpackPlugin('./src/img/favicon.png'),
   ],
 });
