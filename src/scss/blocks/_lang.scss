@@ -1,5 +1,46 @@
 .lang {
-  display: none;
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__link {
+    color: rgb(189, 189, 189);
+    font-family: $main-font;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.35s;
+    &:hover,
+    &--active {
+      color: rgb(0, 0, 0);
+      font-weight: 500;
+      background-color: rgb(255, 214, 44);
+    }
+  }
+}
+
+@media #{$tablet-width-only} {
+  .lang {
+    display: none;
+    &__list {
+      display: flex;
+    }
+    &__item {
+      &:not(:last-of-type) {
+        margin-right: 15px;
+      }
+    }
+    &__link {
+      display: block;
+      padding: 10px;
+    }
+    &__value {
+      display: none;
+    }
+  }
 }
 
 @media #{$desktop-width} {
@@ -37,12 +78,9 @@
       position: absolute;
       top: 35px;
       left: 0;
-      margin: 0;
-      padding: 0;
       opacity: 0;
       visibility: hidden;
       transform: scale(0);
-      list-style: none;
       transition: opacity 0.35s;
       &:hover,
       &:focus {
@@ -62,20 +100,10 @@
       justify-content: center;
       width: 50px;
       height: 33px;
-      color: rgb(189, 189, 189);
-      font-family: $main-font;
-      font-size: 18px;
-      font-weight: 400;
-      line-height: 18px;
-      text-transform: uppercase;
-      text-decoration: none;
       background-color: rgb(249, 250, 252);
-      transition: all 0.35s;
       box-sizing: border-box;
       &:hover,
       &--active {
-        color: rgb(0, 0, 0);
-        font-weight: 500;
         background-color: rgb(255, 214, 44);
       }
     }

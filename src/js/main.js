@@ -6,7 +6,6 @@ import playVideo from './video';
 const navLinks = document.querySelectorAll('.smooth-toggler');
 const nav = document.querySelector('.navigation');
 const navLogo = nav.querySelector('img');
-const navList = nav.querySelector('.navigation__list');
 const navHamburger = nav.querySelector('.navigation__hamburger');
 const scroll = new SmoothScroll();
 
@@ -37,8 +36,7 @@ function onLinkClick(link) {
   const selector = link.getAttribute('href');
   const content = document.querySelector(selector);
   addScroll(content, link);
-  navList.classList.remove('navigation__list--active');
-  navHamburger.classList.remove('navigation__hamburger--active');
+  nav.classList.remove('navigation--active');
 }
 
 navLinks.forEach((link) => {
@@ -47,16 +45,14 @@ navLinks.forEach((link) => {
   });
 });
 
-function showNav(evt) {
-  evt.preventDefault();
-  evt.currentTarget.classList.toggle('navigation__hamburger--active');
-  navList.classList.toggle('navigation__list--active');
+function showNav() {
+  nav.classList.toggle('navigation--active');
 }
 
 window.addEventListener('scroll', fixNav);
 
-navHamburger.addEventListener('click', (evt) => {
-  showNav(evt);
+navHamburger.addEventListener('click', () => {
+  showNav();
 });
 
 initCarousel();
