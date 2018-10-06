@@ -2,12 +2,14 @@
   "name": "electro-mega-watt",
   "version": "1.0.0",
   "description": "",
+  "home-page": "https://ledvis.github.io/electro-mega-watt/",
   "main": "webpack.config.js",
   "scripts": {
     "dev": "webpack --mode development --config webpack.dev.js",
     "build": "del-cli build && webpack --mode production --config webpack.prod.js",
     "watch": "webpack --mode development --watch --config webpack.dev.js",
-    "start": "webpack-dev-server --mode development --open --config webpack.dev.js"
+    "start": "webpack-dev-server --mode development --open --config webpack.dev.js",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -46,6 +48,7 @@
     "browserslist": "^3.2.8",
     "copy-webpack-plugin": "^4.5.1",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "gh-pages": "^2.0.1",
     "imagemin-mozjpeg": "^7.0.0",
     "imagemin-webpack-plugin": "^2.1.5",
     "jquery": "^3.3.1",

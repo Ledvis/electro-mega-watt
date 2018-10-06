@@ -2,7 +2,7 @@
   font-family: "Neo Sans Pro";
   font-style: normal;
   font-weight: 400;
-  src: local("Neo Sans Pro Regular"), local("NeoSansPro-Regular"), url("/fonts/NeoSansPro-Regular.ttf") format("truetype");
+  src: local("Neo Sans Pro Regular"), local("NeoSansPro-Regular"), url("/fonts/NeoSansPro-Regular.woff") format("woff");
   font-display: swap;
 }
 
@@ -10,7 +10,7 @@
   font-family: "Neo Sans Pro";
   font-style: normal;
   font-weight: 300;
-  src: local("Neo Sans Pro Light"), local("NeoSansPro-Light"), url("/fonts/NeoSansPro-Light.ttf") format("truetype");
+  src: local("Neo Sans Pro Light"), local("NeoSansPro-Light"), url("/fonts/NeoSansPro-Light.woff") format("woff");
   font-display: swap;
 }
 
@@ -18,6 +18,6 @@
   font-family: "Neo Sans Pro";
   font-style: normal;
   font-weight: 500;
-  src: local("Neo Sans Pro Bold"), local("NeoSansPro-Bold"), url("/fonts/NeoSansPro-Bold.ttf") format("truetype");
+  src: local("Neo Sans Pro Bold"), local("NeoSansPro-Bold"), url("/fonts/NeoSansPro-Bold.woff") format("woff");
   font-display: swap;
 }

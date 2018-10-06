@@ -6,7 +6,7 @@ import playVideo from './video';
 const navLinks = document.querySelectorAll('.smooth-toggler');
 const nav = document.querySelector('.navigation');
 const navLogo = nav.querySelector('img');
-const navHamburger = nav.querySelector('.navigation__hamburger');
+const navHamburger = nav.querySelector('.navigation__hamburger').parentElement;
 const scroll = new SmoothScroll();
 
 function addScroll(content, toggler, options = {
